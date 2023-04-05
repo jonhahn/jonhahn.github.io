@@ -1,10 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/jon.css">
+    <title>Homepage</title>
 </head>
 <body>
- Hello
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4 text-center">
+        <h3></h3>
+        <h4><span id="datetime"></span></h4>
+
+        <script>
+        var dt = new Date().toDateString();
+        document.getElementById("datetime").innerHTML = dt.toLocaleString();
+        </script>
+    </div>
+    <div class="col-sm-4">
+        <form class="row g-3" method="GET" action="https://www.google.com/search">
+            <div class="col">
+                <input class="form-control" name="q" type="text">
+            </div>
+            <div class="col">
+            <button type="submit" class="btn btn-primary mb-3">Google Search</button>
+            </div>
+        </form>
+    </div>
+    <div class="col-sm-4" id="weather">
+    </div>
+  </div>
+
+  <div class="row">
+    <h5>News</h5>
+    <div class="col-sm-3 containere mx-auto" id="testme1">
+      <a href="https://www.nyt.com"><img src="https://s3.amazonaws.com/test.bucket.hahn/nytss.png" class="img-responsive"></a>
+    </div>
+    <div class="col-sm-3 containere mx-auto" id="testme3">
+        <a href="https://www.washingtonpost.com"><img src="https://s3.amazonaws.com/test.bucket.hahn/washss.png" class="img-responsive"></a>
+    </div>
+    <div class="col-sm-3 containere mx-auto" id="testme2">
+        <iframe src="https://www.npr.org/sections/news/" style="height: 280px;"></iframe>
+    </div>
+
+  </div>
+
+  <div class="row">
+    <div class="col-sm-4" id="yt">
+        <h5>Recent YouTube Videos </h5>
+
+    </div>
+    <div class="col-sm-4">
+        <h5>Ikeadle </h5>
+        <iframe src="https://www.ikeadle.com" style="padding-left:5% ; width:95%; height: 550px;"></iframe>
+    </div>
+
+      <div class="col-sm-4">
+          <h5>Links </h5>
+          <p><a href="https://www.gmail.com">Gmail</a></p>
+          <p><a href="https://www.capitalone360.com">CapitalOne</a></p>
+          <p><a href="https://www.chase.com">Chase</a></p>
+          <p><a href="https://www.53.com">53 Bank</a></p>
+          <p><a href="https://www.mint.com">Mint</a></p>
+          <p><a href="https://billpay.saintpaulwater.com/LinkLogin.aspx">Water Bill</a></p>
+    </div>
+  </div>
+</div>
+
+
 </body>
+
+<script src="js/jon.js"></script>
 </html>
